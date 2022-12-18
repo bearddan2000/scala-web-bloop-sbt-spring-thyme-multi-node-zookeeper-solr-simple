@@ -1,0 +1,15 @@
+#######################
+# Spring boot properties
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+########################
+
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+  data:
+    solr:
+      host: http://db:8983/solr/
+      repositories:
+        enabled: true

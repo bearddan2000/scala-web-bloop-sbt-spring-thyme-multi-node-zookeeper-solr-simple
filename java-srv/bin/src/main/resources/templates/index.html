@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="fragments/header :: header"/>
+</head>
+
+<body>
+
+<div th:replace="fragments/nav :: nav"/>
+
+<h2>
+    <span th:text="${title}"></span>
+</h2>
+<table id="dataTable" class="display">
+   <!-- Header Table -->
+   <thead>
+        <tr>
+            <th th:each="column : ${columnNames}" th:text="${column}"></th>
+        </tr>
+    </thead>
+    <!-- Footer Table -->
+    <tfoot>
+        <tr>
+            <th th:each="column : ${columnNames}" th:text="${column}"></th>
+        </tr>
+    </tfoot>
+</table>
+<script th:src="|/js/${dataTable}.js|"></script>
+<!--
+<script src="/js/dogTable.js"></script>
+-->
+</body>
+</html>
